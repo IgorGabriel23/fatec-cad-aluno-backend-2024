@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fatec.student.dto.StudentResponse;
 import com.fatec.student.entities.Student;
 import com.fatec.student.repositories.StudentRepository;
 
@@ -18,6 +19,7 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     public List<Student> getStudents(){
+        List <Student> students = studentRepository.findAll();
         return studentRepository.findAll();
     }
 
